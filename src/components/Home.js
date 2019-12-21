@@ -1,7 +1,7 @@
 import React from 'react'
 import TodoList from './TodoList';
 import Todo from "../contexts/Todo";
-import { TodoState } from "../contexts/Todo";
+
 
 export default function Home() {
     return (
@@ -11,5 +11,3 @@ export default function Home() {
         </div>
     )
 }
-// Expose the GlobalState object to the window
-window.TodoState = TodoState;

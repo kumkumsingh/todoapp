@@ -5,6 +5,7 @@ import { Route, BrowserRouter } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from './components/Home'
+import { TodoState } from "./contexts/Todo";
 
 function App() {
   return (
@@ -21,5 +22,7 @@ function App() {
 }
 
 export default App;
+// Expose the GlobalState object to the window
+window.TodoState = TodoState;
 
 

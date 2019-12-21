@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { TodoState } from "../contexts/Todo";
-// import { makeStyles } from '@material-ui/core/styles';
-// import Button from '@material-ui/core/Button';
-//import Checkbox from '@material-ui/core/Checkbox';
+import Button from '@material-ui/core/Button';
+import Checkbox from '@material-ui/core/Checkbox';
+import TextField from '@material-ui/core/TextField';
 // Create a shorthand Hook for using the GlobalState
 const useTodoState = () => React.useContext(TodoState);
 
@@ -15,7 +15,7 @@ export default function TodoList() {
     setNewTodo({ title: e.target.value });
   }
 
-  function handleSubmit(event) {
+  function handleSubmit() {
     console.log("submitting");
     TodoState.set({
       todos: [...todos, { ...newTodo, id: todos.length + 1 }]
@@ -63,30 +63,33 @@ export default function TodoList() {
   return (
     <div>
     <div>DUODEKA TodoApp</div>
-      <input
+      <TextField
         placeholder=" Add a Task"
         value={newTodo.title}
         name="title"
         onChange={addNewTodo}
-      ></input>
-      <button type="submit" onClick={handleSubmit}>
+        variant="outlined" 
+      ></TextField>
+      <Button variant="contained" color="primary" onClick={handleSubmit}>
         Add Todo
-      </button>
+      </Button>
       {todos.map(todo => {
         return (
           <div key={todo.id}>
             <div>
-              <input
+              <Checkbox
                 type="checkbox"
                 onChange={() => completedTodo(todo.id)}
                 defaultChecked={todo.completed}
+                color="primary"
               />
-              <input
+              <TextField
                 value={todo.title}
                 name="title"
                 onChange={e => updateTodo(e.target.value, todo.id)}
-              ></input>
-              <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+                variant="outlined" 
+              ></TextField>
+              <Button variant="contained" color="primary" onClick={() => deleteTodo(todo.id)}>Delete</Button>
             </div>
           </div>
         );

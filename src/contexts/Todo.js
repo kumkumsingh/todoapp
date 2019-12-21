@@ -1,7 +1,7 @@
 import React, { createContext, Component } from "react";
 //import uuid from "uuid/v1";
 
-const initialTodoState = [{ title: "cleaning room", id: 1 }]
+const initialTodoState = [{ title: "Learn Context and Hooks", id: 1 , completed: false}]
 
 // Create a Context for the (global todos) State
 export const TodoState = createContext();

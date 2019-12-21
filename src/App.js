@@ -6,7 +6,7 @@ import { TodoState } from "./contexts/Todo";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <div>DUODEKA TodoApp</div>
       <Todo Root={() => <TodoList />} />
     </div>

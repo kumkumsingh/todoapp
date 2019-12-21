@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { TodoState } from "../contexts/Todo";
+// import { makeStyles } from '@material-ui/core/styles';
+// import Button from '@material-ui/core/Button';
 //import Checkbox from '@material-ui/core/Checkbox';
 // Create a shorthand Hook for using the GlobalState
 const useTodoState = () => React.useContext(TodoState);
@@ -16,7 +18,7 @@ export default function TodoList() {
   function handleSubmit(event) {
     console.log("submitting");
     TodoState.set({
-      todos: [...todos, { ...newTodo, id: todos.length + 1}]
+      todos: [...todos, { ...newTodo, id: todos.length + 1 }]
     });
 
     setNewTodo({ title: "" });
@@ -40,26 +42,27 @@ export default function TodoList() {
       todos: todos
     });
 
-    console.log("checking edited todo",todos);
+    console.log("checking edited todo", todos);
     //setNewTodo({ title: e.target.value });
   }
   //Mark todo as completed
   function completedTodo(id) {
-   
     todos.map(todo => {
       if (todo.id === id) {
         let done = !todo.completed;
-        todo.completed=done;
+        todo.completed = done;
         console.log("checking after todo is marked as completed", done);
       }
-     
+
       return todo;
     });
-    console.log('checking todos afte checking',todos)
+    TodoState.set({
+      todos: todos
+    });
   }
   return (
     <div>
-      <div>Todos</div>
+    <div>DUODEKA TodoApp</div>
       <input
         placeholder=" Add a Task"
         value={newTodo.title}

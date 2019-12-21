@@ -1,4 +1,5 @@
 import React, { createContext, Component } from "react";
+//import Home from '../components/Home'
 //import uuid from "uuid/v1";
 
 const initialTodoState = [{ title: "Learn Context and Hooks", id: 1 , completed: false}]
@@ -33,11 +34,11 @@ export default class Todo extends Component {
   };
   render() {
     const { todos } = this.state;
-    const { Root } = this.props;
+    const { Home } = this.props;
     return (
       // Pass the current value of GlobalState, based on this components' State, down
       <TodoState.Provider value={todos}>
-        <Root />
+        <Home />
       </TodoState.Provider>
     );
   }

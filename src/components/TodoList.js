@@ -61,8 +61,8 @@ export default function TodoList() {
     });
   }
   return (
-    <div>
-    <div>DUODEKA TodoApp</div>
+    <div className="TodoList">
+    <div className="TodoListText">DUODEKA TodoApp</div>
       <TextField
         placeholder=" Add a Task"
         value={newTodo.title}
@@ -75,7 +75,7 @@ export default function TodoList() {
       </Button>
       {todos.map(todo => {
         return (
-          <div key={todo.id}>
+          <div className ="spaceList" key={todo.id}>
             <div>
               <Checkbox
                 type="checkbox"

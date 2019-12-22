@@ -8,17 +8,14 @@
 
 .App-header {
   background-color:lightcoral;
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: row;
   font-size: calc(10px + 2vmin);
   color: black;
-  /* width:100%; */
 }
 
 div.flexColumns:nth-of-type(1) {
  flex: 1;
- /* width: 150px; */
  justify-content: center;
 }
 
@@ -28,7 +25,6 @@ div.flexColumns:nth-of-type(2) {
  }
  div.flexColumns:nth-of-type(3) {
   flex: 1;
-  /* width: 150px; */
  }
 
 .TodoList {
@@ -57,16 +53,13 @@ div.flexColumns:nth-of-type(2) {
 }
 .spaceListCol1 {
   padding: 5px;
-  /* flex: 1 */
 }
 .spaceListCol2 {
   padding: 5px;
-  /* flex: 8 */
 }
 .spaceListCol3 {
   padding: 5px;
   justify-content: center;
-  /* flex: 1 */
 }
 .nav {
   background-color: rgb(0, 128, 11);
@@ -83,11 +76,8 @@ div.flexColumns:nth-of-type(2) {
 .list{
   color: #fff;
   font-size: 1vw;
-  /* width: 225px; */
   margin: 20px auto;
-  /* height: 50px; */
   background-color: lightcoral;
-  /* border-radius: 5px; */
 }
 
 

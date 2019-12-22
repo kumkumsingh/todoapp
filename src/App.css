@@ -1,28 +1,42 @@
 
-@media (prefers-reduced-motion: no-preference) {
- 
+@media screen and (max-width:888px ) {
+ .App-header{
+   width:100%
+ }
+ div.flexColumns:nth-of-type(1) {
+   width: 20%;
+ }
+ div.flexColumns:nth-of-type(2) {
+ width:70%;
+ }
+ div.flexColumns:nth-of-type(3) {
+   width:10%
+ }
 }
 
 .App-header {
   background-color:lightcoral;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: row;
   font-size: calc(10px + 2vmin);
   color: white;
+  width:100%;
 }
 
 div.flexColumns:nth-of-type(1) {
- flex: none;
- width: 150px;
+ flex: 2;
+ /* width: 150px; */
+ justify-content: center;
 }
 
 div.flexColumns:nth-of-type(2) {
   flex: 7;
+  text-align: center;
  }
  div.flexColumns:nth-of-type(3) {
-  flex: none;
-  width: 150px;
+  flex: 1;
+  /* width: 150px; */
  }
 .App-link {
   color: #61dafb;
@@ -30,15 +44,40 @@ div.flexColumns:nth-of-type(2) {
 
 .TodoList {
  display: flex;
+ padding: 50px;
  flex-direction: column;
  text-align: center;  
 }
-.TodoListText {
- padding: 20px;
+
+.TodoListRow1 {
+  padding: 10px;
 }
 
+.TodoListRow2 {
+  padding: 10px;
+}
+.TodoListRow3 {
+  padding: 10px;
+}
 .spaceList {
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;   
+}
+.spaceListCol1 {
+  padding: 5px;
+ 
+}
+.spaceListCol2 {
+  padding: 5px;
+}
+.spaceListCol3 {
+  padding: 5px;
+}
+.nav {
+  background-color: rgb(0, 128, 11);
 }
 .ul {
   padding: 10px;
@@ -48,19 +87,13 @@ div.flexColumns:nth-of-type(2) {
   height:1000px;
   
 }
-#todo-results div{
-  display:inline;
-  margin:10px;
+.list{
+  color: #fff;
+  width: 300px;
+  margin: 20px auto;
+  height: 50px;
+  background-color: lightcoral;
+  border-radius: 5px;
+}
 
-}
-/* .li {
-  display: inline-block;
-  margin: 0 10px;
-}
-.firstChild {
-   align-self: flex-start;
-}
-.secondChild {
-   align-self: flex-end;
-} */
 

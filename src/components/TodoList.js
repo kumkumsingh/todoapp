@@ -52,6 +52,9 @@ export default function TodoList() {
 
       return todo;
     });
+    TodoState.set({
+        todos
+      });
   }
   return (
     <div className="TodoList">

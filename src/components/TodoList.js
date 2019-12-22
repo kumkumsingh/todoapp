@@ -3,6 +3,8 @@ import { TodoState } from "../contexts/Todo";
 import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 // Create a shorthand Hook for using the GlobalState
 const useTodoState = () => React.useContext(TodoState);
 
@@ -93,7 +95,8 @@ export default function TodoList() {
                     ></TextField>
                 </div>
                 <div className ="spaceListCol3">
-                    <Button variant="contained" color="primary" onClick={() => deleteTodo(todo.id)}>Delete</Button>
+                    {/* <Button variant="contained" color="primary" onClick={() => deleteTodo(todo.id)}>Del</Button> */}
+                    <DeleteIcon color="primary" onClick={() => deleteTodo(todo.id)}></DeleteIcon>
                 </div>
           </div>
         );

@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App-header">
-        <div className="flexColumns"><NavBar className="firstChild"> </NavBar></div>
+        <div className="flexColumns"><NavBar> </NavBar></div>
         <div className="flexColumns"><Route path="/" exact component={Home} /></div>
         <div className="flexColumns"><Route path="/about" exact component={About} /></div>
         <div className="flexColumns"><Route path="/contact" exact component={Contact} /></div>

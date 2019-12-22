@@ -1,6 +1,6 @@
 import React, { createContext, Component } from "react";
 
-const initialTodoState = [{ title: "Learn Context and Hooks", id: 1 , completed: false}]
+const initialTodoState = [{ title: "Learn Context and Hooks", id: 1}]
 
 // Create a Context for the (global todos) State
 export const TodoState = createContext();

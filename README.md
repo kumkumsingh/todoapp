@@ -2,14 +2,11 @@
 
 ## Clone the project using 
 
-https://github.com/kumkumsingh/todoapp.git
+https://github.com/kumkumsingh/todoapp.git and then
 
-## Dependencies
- 1.npm install @material-ui/core
- 2.npm install @material-ui/icons
- 3.npm install react-router-dom
+## npm install then 
 
-### `npm start`
+### npm start
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -20,5 +17,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 2.Check the todo to be completed by clicking check box.
 3.Delete a particular todo by clicking on delete icon.
 4.Navigate to about page or contact page by clicking on About link or Contact link in the Navigation Bar.
+
+## Deployed version of the app is over netlify 
+
+https://nostalgic-elion-711519.netlify.com/
 
 
